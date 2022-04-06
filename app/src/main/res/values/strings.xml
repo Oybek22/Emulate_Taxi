@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Taxi</string>
+    <string name="hint_name">Ivan</string>
+    <string name="hint_surname">Ivanov</string>
+</resources>
