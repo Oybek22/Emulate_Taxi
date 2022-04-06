@@ -4,6 +4,196 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".SetPath">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_SetPath"
+        style="@style/Toolbar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/point_from_text_SetPath"
+        style="@style/MyText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Point From"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar_SetPath" />
+
+    <TextView
+        android:id="@+id/city_from_text_SetPath"
+        style="@style/MyText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="City"
+        app:layout_constraintBottom_toBottomOf="@id/city_from_value_SetPath"
+        app:layout_constraintEnd_toStartOf="@id/city_from_value_SetPath"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/city_from_value_SetPath"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="30dp"
+        android:digits="- abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+        android:hint="New York"
+        android:inputType="textCapSentences"
+        android:maxLength="25"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toEndOf="@id/city_from_text_SetPath"
+        app:layout_constraintTop_toBottomOf="@+id/point_from_text_SetPath" />
+
+    <TextView
+        android:id="@+id/street_from_text_SetPath"
+        style="@style/MyText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Street"
+        app:layout_constraintBottom_toBottomOf="@+id/street_from_value_SetPath"
+        app:layout_constraintEnd_toStartOf="@id/street_from_value_SetPath"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/street_from_value_SetPath"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="30dp"
+        android:digits="- abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+        android:hint="Jefferson Street"
+        android:inputType="textCapSentences"
+        android:maxLength="25"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toStartOf="@+id/city_from_value_SetPath"
+        app:layout_constraintTop_toBottomOf="@id/city_from_value_SetPath" />
+
+    <TextView
+        android:id="@+id/house_number_from_text_SetPath"
+        style="@style/MyText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="House\nNumber"
+        app:layout_constraintBottom_toBottomOf="@+id/house_number_from_value_SetPath"
+        app:layout_constraintEnd_toStartOf="@id/house_number_from_value_SetPath"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/house_number_from_value_SetPath"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="30dp"
+        android:digits="0123456798abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+        android:hint="1"
+        android:inputType="textCapSentences"
+        android:maxLength="5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toStartOf="@+id/street_from_value_SetPath"
+        app:layout_constraintTop_toBottomOf="@id/street_from_value_SetPath" />
+
+
+    <!--Point To-->
+
+    <TextView
+        android:id="@+id/point_to_text_SetPath"
+        style="@style/MyText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="Point From"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/house_number_from_text_SetPath" />
+
+    <TextView
+        android:id="@+id/city_to_text_SetPath"
+        style="@style/MyText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="City"
+        app:layout_constraintBottom_toBottomOf="@id/city_to_value_SetPath"
+        app:layout_constraintEnd_toStartOf="@id/city_to_value_SetPath"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/city_to_value_SetPath"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="30dp"
+        android:digits="- abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+        android:hint="New York"
+        android:inputType="textCapSentences"
+        android:maxLength="25"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toEndOf="@id/city_to_text_SetPath"
+        app:layout_constraintTop_toBottomOf="@+id/point_to_text_SetPath" />
+
+    <TextView
+        android:id="@+id/street_to_text_SetPath"
+        style="@style/MyText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Street"
+        app:layout_constraintBottom_toBottomOf="@+id/street_to_value_SetPath"
+        app:layout_constraintEnd_toStartOf="@id/street_to_value_SetPath"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/street_to_value_SetPath"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="30dp"
+        android:digits="- abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+        android:hint="Grandrose Street"
+        android:inputType="textCapSentences"
+        android:maxLength="25"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toStartOf="@+id/city_to_value_SetPath"
+        app:layout_constraintTop_toBottomOf="@id/city_to_value_SetPath" />
+
+    <TextView
+        android:id="@+id/house_number_to_text_SetPath"
+        style="@style/MyText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="House\nNumber"
+        app:layout_constraintBottom_toBottomOf="@+id/house_number_to_value_SetPath"
+        app:layout_constraintEnd_toStartOf="@id/house_number_to_value_SetPath"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/house_number_to_value_SetPath"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="30dp"
+        android:digits="0123456798abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+        android:hint="1"
+        android:inputType="textCapSentences"
+        android:maxLength="5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toStartOf="@+id/street_to_value_SetPath"
+        app:layout_constraintTop_toBottomOf="@id/street_to_value_SetPath" />
+
+    <Button
+        android:id="@+id/confirm_addresses_SetPath"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Confirm"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/house_number_to_value_SetPath" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -10,6 +10,14 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Taxi">
         <activity
+            android:name=".SetPath"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.SetPath" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
@@ -25,7 +33,6 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-
     </application>
 
 </manifest>

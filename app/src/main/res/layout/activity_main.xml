@@ -4,98 +4,100 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
     android:orientation="vertical"
     tools:context=".MainActivity">
 
     <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar_taxi"
+        android:id="@+id/toolbar_MainActivity"
         style="@style/Toolbar"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/tel_number_text"
+        android:id="@+id/tel_number_text_MainActivity"
         style="@style/MyText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Telephone number"
-        app:layout_constraintBottom_toBottomOf="@id/tel_number_value"
-        app:layout_constraintEnd_toStartOf="@id/tel_number_value"
+        app:layout_constraintBottom_toBottomOf="@id/tel_number_value_MainActivity"
+        app:layout_constraintEnd_toStartOf="@id/tel_number_value_MainActivity"
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
-        android:id="@+id/tel_number_value"
+        android:id="@+id/tel_number_value_MainActivity"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="70dp"
         android:layout_marginEnd="30dp"
+        android:digits="+0123456789"
         android:hint="+79123456789"
         android:inputType="phone"
         android:maxLength="12"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_weight="1"
-        app:layout_constraintStart_toEndOf="@id/tel_number_text"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar_taxi" />
+        app:layout_constraintStart_toEndOf="@id/tel_number_text_MainActivity"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar_MainActivity" />
 
     <TextView
-        android:id="@+id/name_text"
+        android:id="@+id/name_text_MainActivity"
         style="@style/MyText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Name"
-        app:layout_constraintBottom_toBottomOf="@+id/name_value"
-        app:layout_constraintEnd_toStartOf="@id/name_value"
+        app:layout_constraintBottom_toBottomOf="@+id/name_value_MainActivity"
+        app:layout_constraintEnd_toStartOf="@id/name_value_MainActivity"
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
-        android:id="@+id/name_value"
+        android:id="@+id/name_value_MainActivity"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
         android:layout_marginEnd="30dp"
+        android:digits="- abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
         android:hint="@string/hint_name"
-        android:inputType="textCapSentences"
+        android:inputType="textPersonName|textCapSentences"
         android:maxLength="20"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_weight="1"
-        app:layout_constraintStart_toStartOf="@+id/tel_number_value"
-        app:layout_constraintTop_toBottomOf="@id/tel_number_value" />
+        app:layout_constraintStart_toStartOf="@+id/tel_number_value_MainActivity"
+        app:layout_constraintTop_toBottomOf="@id/tel_number_value_MainActivity" />
 
 
     <TextView
-        android:id="@+id/surname_text"
+        android:id="@+id/surname_text_MainActivity"
         style="@style/MyText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Surname"
-        app:layout_constraintBottom_toBottomOf="@+id/surname_value"
-        app:layout_constraintEnd_toStartOf="@id/surname_value"
+        app:layout_constraintBottom_toBottomOf="@+id/surname_value_MainActivity"
+        app:layout_constraintEnd_toStartOf="@id/surname_value_MainActivity"
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
-        android:id="@+id/surname_value"
+        android:id="@+id/surname_value_MainActivity"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="30dp"
+        android:digits="- abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
         android:hint="@string/hint_surname"
-        android:inputType="textCapSentences"
+        android:inputType="textPersonName|textCapSentences"
         android:maxLength="20"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_weight="1"
-        app:layout_constraintStart_toStartOf="@+id/name_value"
-        app:layout_constraintTop_toBottomOf="@id/name_value" />
+        app:layout_constraintStart_toStartOf="@+id/name_value_MainActivity"
+        app:layout_constraintTop_toBottomOf="@id/name_value_MainActivity" />
 
     <Button
-        android:id="@+id/button_registration"
+        android:id="@+id/button_registration_MainActivity"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="60dp"
         android:text="REGISTRATION"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/surname_value" />
+        app:layout_constraintTop_toBottomOf="@id/surname_value_MainActivity" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
