@@ -70,6 +70,8 @@ public class TaxiCall extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_taxi_call);
 
+        Log.d("MyLogs", "Create TaxiCall");
+
         initViews();
         setInformation();
         toolBarSet();
@@ -124,5 +126,35 @@ public class TaxiCall extends AppCompatActivity {
     public boolean onSupportNavigateUp() {
         onBackPressed();
         return true;
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        Log.d("MyLogs", "Start TaxiCall");
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Log.d("MyLogs", "Resume TaxiCall");
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        Log.d("MyLogs", "Pause TaxiCall");
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        Log.d("MyLogs", "Stop TaxiCall");
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        Log.d("MyLogs", "Destroy TaxiCall");
     }
 }

@@ -41,6 +41,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        Log.d("MyLogs", "Create MainActivity");
+
         initViews();
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle("Registration details");
@@ -130,7 +132,40 @@ public class MainActivity extends AppCompatActivity {
     }
 
 //    Use
+
 //    SharedPreferences.Editor editor = sPref.edit();
 //    editor.clear().commit();
-//    to reset
+//
+//    to reset data
+
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        Log.d("MyLogs", "Start MainActivity");
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Log.d("MyLogs", "Resume MainActivity");
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        Log.d("MyLogs", "Pause MainActivity");
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        Log.d("MyLogs", "Stop MainActivity");
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        Log.d("MyLogs", "Destroy MainActivity");
+    }
 }

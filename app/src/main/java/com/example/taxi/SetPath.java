@@ -35,6 +35,8 @@ public class SetPath extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_set_path);
 
+        Log.d("MyLogs", "Create SetPath");
+
         initViews();
         toolBarSet();
 
@@ -88,5 +90,35 @@ public class SetPath extends AppCompatActivity {
         house_number_value_to = (EditText) findViewById(R.id.house_number_to_value_SetPath);
         confirm_addresses = (Button) findViewById(R.id.confirm_addresses_SetPath);
         Log.d("MyLogs", "Work initViews()");
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        Log.d("MyLogs", "Start SetPath");
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Log.d("MyLogs", "Resume SetPath");
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        Log.d("MyLogs", "Pause SetPath");
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        Log.d("MyLogs", "Stop SetPath");
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        Log.d("MyLogs", "Destroy SetPath");
     }
 }
